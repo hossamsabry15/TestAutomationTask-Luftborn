@@ -3,10 +3,10 @@
 ## **Quick Start**
 ```bash
 # 1. Download project
-git clone [your-repo-url]
+git clone https://github.com/hossamsabry15/TestAutomationTask-Luftborn.git
 
 # 2. Go to folder
-cd TestAutomationTask
+cd TestAutomationTask-Luftborn
 
 # 3. Run test
 mvn clean test
@@ -35,7 +35,7 @@ The project includes **Allure Reports** - beautiful test reports that show:
 # Run tests and generate report
 mvn clean test allure:report
 
-# Open the report
+# Open the report (requires Allure installed)
 allure serve target/allure-results
 ```
 
@@ -53,7 +53,7 @@ allure serve target/allure-results
 
 ## **Project Files**
 ```
-TestAutomationTask/
+TestAutomationTask-Luftborn/
 ├── src/              # Code files
 ├── pom.xml          # Setup file
 ├── allure-results/  # Test reports (auto-generated)
@@ -75,35 +75,26 @@ TestAutomationTask/
 6. Close browser
 
 ## **Install Allure (Optional)**
-To see the fancy reports:
-```bash
-# Windows (using scoop)
-scoop install allure
-
-# Mac
-brew install allure
-
-# Linux
-sudo apt-add-repository ppa:qameta/allure
-sudo apt-get update
-sudo apt-get install allure
-```
+To see the fancy reports, install Allure:
 
 ## **Need Help?**
 If test fails:
 1. Update Chrome browser
-2. Check internet connection
+2. Check internet connection  
 3. Run `mvn clean test` again
 4. Allure report will show exactly where it failed
 
-## **Upload to GitHub**
-```bash
-git init
-git add .
-git commit -m "First commit"
-git remote add origin [your-github-url]
-git push -u origin main
+**Common issue fix:** If you see "31,000" number error, update the code to remove commas:
+```java
+// Change this:
+int resultCount = Integer.parseInt(resultText);
+
+// To this:
+int resultCount = Integer.parseInt(resultText.replace(",", ""));
 ```
+
+## **GitHub Repository**
+**Project URL:** https://github.com/hossamsabry15/TestAutomationTask-Luftborn
 
 ---
 
