@@ -84,15 +84,6 @@ If test fails:
 3. Run `mvn clean test` again
 4. Allure report will show exactly where it failed
 
-**Common issue fix:** If you see "31,000" number error, update the code to remove commas:
-```java
-// Change this:
-int resultCount = Integer.parseInt(resultText);
-
-// To this:
-int resultCount = Integer.parseInt(resultText.replace(",", ""));
-```
-
 ## **GitHub Repository**
 **Project URL:** https://github.com/hossamsabry15/TestAutomationTask-Luftborn
 
